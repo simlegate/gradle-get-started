@@ -1,9 +1,3 @@
-gradle-get-started
-==================
-
-Get started Gradle
-
-
 ## Requirements
 
 ```shell
@@ -31,3 +25,36 @@ JVM:          1.7.0_25 (Oracle Corporation 23.25-b01)
 OS:           Mac OS X 10.9.3 x86_64
 
 ```
+
+
+## Get Started
+
+Create new project
+
+```shell
+$ mkdir gradle-get-started
+
+$ cd gradle-get-started
+
+$ gradle init
+```
+Generate some fils under gradle-get-started
+
+```shell
+$ tree
+
+.
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+└── settings.gradle
+```
+
+
+
+
+
