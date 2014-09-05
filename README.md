@@ -41,7 +41,7 @@ $ cd gradle-get-started
 
 $ gradle init
 ```
-Generate some fils under gradle-get-started
+this will generate some fils under gradle-get-started
 
 ```shell
 $ tree
