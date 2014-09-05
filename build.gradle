@@ -7,7 +7,6 @@
  * user guide available at http://gradle.org/docs/2.0/userguide/tutorial_java_projects.html
  */
 
-/*
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
@@ -18,20 +17,17 @@ repositories {
     mavenCentral()
 }
 
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
-    compile 'org.slf4j:slf4j-api:1.7.5'
     compile(  
+        'com.google.guava:guava:13.0.1',  
         'io.netty:netty:3.6.1.Final',  
         'org.slf4j:slf4j-api:1.7.5',  
         'commons-io:commons-io:2.4'  
     )
 
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
     runtime(  
         'com.googlecode.sli4j:sli4j-slf4j-logback:2.0',  
         'ch.qos.logback:logback-classic:1.0.9'  
@@ -45,5 +41,11 @@ dependencies {
         'org.apache.httpcomponents:fluent-hc:4.2.1',  
         'commons-logging:commons-logging:1.1.1',  
     )
+
+    jar {
+      manifest.attributes(
+          'Class-Path': configurations.runtime.files.collect { it.name }.join(' '),
+          'Main-Class': 'com.quanyibao.cnepay.HelloWorld'
+          )
+    }
 }
-*/
